@@ -1,0 +1,66 @@
+DEPTH = 32; -- The size of memory in words 
+WIDTH = 16; -- The size of data in bits 
+ADDRESS_RADIX = DEC; -- The radix for address values 
+DATA_RADIX = BIN; -- The radix for data values 
+CONTENT -- start of (address : data pairs) 
+%
+          C     00101000
+INF   01111000
+F     //first float
+
+lb r1 r0 F;
+lb r1 r0 F;
+
+fslt r3 r1 r0
+beq r3 r0 2;
+addi r2 r0 111110;
+j exit;
+start: 
+lb r5 r0 INF;
+lb r5 r0 INF;
+
+lb r3 r0 C;
+lb r3 r0 C;
+
+xor r2 r2 r2;
+
+loop: 
+fmult r4 r2 r2
+fsub r4 r1 r4
+fabs r4 r4
+fslt r6 r4 r5 
+addi r5 r4 000000
+fadd r2 r2 r3
+bnq r6 r0 loop
+
+fsub r2 r2 r3
+fsub r2 r2 r3
+
+exit:
+
+%
+BEGIN
+1: 0111000001000000;  --lb r1 r0 F
+2: 0111000001000000;  --lb r1 r0 F
+3: 0001001000011100;  --fslt r3 r1 r0
+4: 1000000011000010;  --beq r0 r3 2
+5: 0010000010111110;  --addi r2 r0 111110
+6: 1110000001111111;  --j exit
+7: 0111000101111110;  -- lb r5 r0 INF
+8: 0111000101111110;  -- lb r5 r0 INF
+9: 0111000011000001;  -- lb r3 r0 C
+10: 0111000011000001;  -- lb r3 r0 C
+11: 0000010010010101;  --xor r2 r2 r2
+12: 0001010010100010;  -- loop: fmult r4 r2 r2 
+13: 0001001100100001;  --fsub r4 r1 r4 
+14: 0001100000100011;  --fabs r4 r4
+15: 0001010011010000;  --fadd r2 r3 r2s
+16: 1000100101111011; --beq r4 r5 loop
+17: 0001100101110100;  --fslt r4 r5 r6
+18: 0010100101000000;  --addi r5 r4 0
+19: 1001110000111000;  --bnq r6 r0 loop
+
+20: 0001010011010001; --fsub r2 r2 r3
+21: 0001010011010001;  --fsub r2 r2 r3  // result in r2
+
+END;

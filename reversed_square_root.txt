@@ -1,0 +1,58 @@
+DEPTH = 32; -- The size of memory in words 
+WIDTH = 16; -- The size of data in bits 
+ADDRESS_RADIX = DEC; -- The radix for address values 
+DATA_RADIX = BIN; -- The radix for data values 
+CONTENT -- start of (address : data pairs) 
+%
+     // F    number
+// C    01010011(0x53)
+// half 0110000     
+// three-half 01000100
+
+lb r1 r0 F
+lb r1 r0 F
+lb r2 r0 C
+lb r2 r0 C
+fsl r3 r1 r0
+beq r3 r0 2;
+addi r2 r0 111110;
+j exit;
+addi r4 r0 00001000
+sr r5 r1 r4
+sub r2 r2 r5
+
+// Newton's method 1th iteration
+lb r3 r0 half
+lb r3 r0 half
+lb r5 r0 three-half
+lb r5 r0 three-half
+fmult r3 r3 r1 
+fmult r3 r3 r2
+fmult r3 r3 r2
+fsub r3 r5 r3
+fmult r2 r2 r3
+
+%
+BEGIN
+1  : 0111000001000000;  --lb r1 r0 F
+2  : 0111000001000000;  --lb r1 r0 F
+3  : 0111000010000001;  --lb r2 r0 C(0x53)
+4  : 0111000010000001;  --lb r2 r0 C
+5  : 0001001000011100;  --fslt r3 r1 r0
+6  : 1000000011000010;  --beq r3 r0 2;
+7  : 0010000010111110;  --addi r2 r0 111110;
+8  : 1110000011000000;  --j exit;
+9  : 0010000100001000;  --addi r4 r0 00001000
+10 : 0000001100101100;  --sr r5 r1 r4
+11 : 0000010101010101;  --sub r2 r2 r5
+12 : 0111000011000010;  --lb r3 r0 half
+13 : 0111000011000010;  --lb r3 r0 half
+14 : 0111000101000011;  --lb r5 r0 three-half
+15 : 0111000101000011;  --lb r5 r0 three-half
+16 : 0001011001011010;  --fmult r3 r3 r1 
+17 : 0001011010011010;  --fmult r3 r3 r2
+18 : 0001011010011010;  --fmult r3 r3 r2
+19 : 0001101011011001;  --fsub r3 r5 r3
+20 : 0001010011010010;  --fmult r2 r2 r3
+
+END;

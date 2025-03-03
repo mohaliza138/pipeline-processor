@@ -1,0 +1,335 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "graphic" (version "1.4"))
+(pin
+	(input)
+	(rect 424 632 592 648)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "WriteMem" (rect 5 0 54 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 424 512 592 528)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "clk" (rect 5 0 19 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 424 528 592 544)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "Address[7..0]" (rect 5 0 71 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 424 600 592 616)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "InData[15..0]" (rect 5 0 69 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(output)
+	(rect 864 544 1040 560)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "OutData[15..0]" (rect 90 0 163 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(symbol
+	(rect 640 712 672 728)
+	(text "VCC" (rect 7 6 27 16)(font "Arial" (font_size 6)))
+	(text "inst" (rect 3 -1 20 11)(font "Arial" )(invisible))
+	(port
+		(pt 16 0)
+		(output)
+		(text "1" (rect 19 7 24 19)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 19 -3 24 9)(font "Courier New" (bold))(invisible))
+		(line (pt 16 0)(pt 16 8))
+	)
+	(drawing
+		(line (pt 8 8)(pt 24 8))
+	)
+	(flipx)
+)
+(symbol
+	(rect 664 512 824 696)
+	(text "LPM_RAM_DP" (rect 41 0 144 16)(font "Arial" (font_size 10)))
+	(text "instruction_ram" (rect 3 172 78 184)(font "Arial" ))
+	(port
+		(pt 0 96)
+		(input)
+		(text "data[LPM_WIDTH-1..0]" (rect 20 87 146 101)(font "Arial" (font_size 8)))
+		(text "data[]" (rect 20 87 51 101)(font "Arial" (font_size 8)))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 0 24)
+		(input)
+		(text "rdaddress[LPM_WIDTHAD-1..0]" (rect 20 15 198 29)(font "Arial" (font_size 8)))
+		(text "rdaddress[]" (rect 20 15 86 29)(font "Arial" (font_size 8)))
+		(line (pt 0 24)(pt 16 24)(line_width 3))
+	)
+	(port
+		(pt 0 72)
+		(input)
+		(text "rdclken" (rect 20 63 61 77)(font "Arial" (font_size 8)))
+		(text "rdclken" (rect 20 63 61 77)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 16 72))
+	)
+	(port
+		(pt 0 56)
+		(input)
+		(text "rdclock" (rect 20 47 61 61)(font "Arial" (font_size 8)))
+		(text "rdclock" (rect 20 47 61 61)(font "Arial" (font_size 8)))
+		(line (pt 0 56)(pt 16 56))
+	)
+	(port
+		(pt 0 40)
+		(input)
+		(text "rden" (rect 20 31 45 45)(font "Arial" (font_size 8)))
+		(text "rden" (rect 20 31 45 45)(font "Arial" (font_size 8)))
+		(line (pt 0 40)(pt 16 40))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "wraddress[LPM_WIDTHAD-1..0]" (rect 20 103 202 117)(font "Arial" (font_size 8)))
+		(text "wraddress[]" (rect 20 103 90 117)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "wrclken" (rect 20 151 66 165)(font "Arial" (font_size 8)))
+		(text "wrclken" (rect 20 151 66 165)(font "Arial" (font_size 8)))
+		(line (pt 0 160)(pt 16 160))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "wrclock" (rect 20 135 66 149)(font "Arial" (font_size 8)))
+		(text "wrclock" (rect 20 135 66 149)(font "Arial" (font_size 8)))
+		(line (pt 0 144)(pt 16 144))
+		(inversion (text "1" (rect 71 135 78 149)(font "Arial" (font_size 8)))(hex))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "wren" (rect 20 119 50 133)(font "Arial" (font_size 8)))
+		(text "wren" (rect 20 119 50 133)(font "Arial" (font_size 8)))
+		(line (pt 0 128)(pt 16 128))
+	)
+	(port
+		(pt 160 40)
+		(output)
+		(text "q[LPM_WIDTH-1..0]" (rect 128 31 236 45)(font "Arial" (font_size 8)))
+		(text "q[]" (rect 128 31 142 45)(font "Arial" (font_size 8)))
+		(line (pt 144 40)(pt 160 40)(line_width 3))
+	)
+	(parameter
+		"LPM_FILE"
+		"data.mif"
+		"File containing initial contents of memory array"
+	)
+	(parameter
+		"LPM_INDATA"
+		"\"REGISTERED\""
+		"Should the write data be registered?"
+		"\"REGISTERED\"" "\"UNREGISTERED\"" 
+	)
+	(parameter
+		"LPM_NUMWORDS"
+		"2^LPM_WIDTHAD"
+		"Number of memory words, default is 2^LPM_WIDTHAD"
+		"2^LPM_WIDTHAD" 
+	)
+	(parameter
+		"LPM_OUTDATA"
+		"\"UNREGISTERED\""
+		"Should the output data be registered?"
+		"\"REGISTERED\"" "\"UNREGISTERED\"" 
+	)
+	(parameter
+		"LPM_RDADDRESS_CONTROL"
+		"\"REGISTERED\""
+		"Should the rdaddress and rden ports be registered?"
+		"\"REGISTERED\"" "\"UNREGISTERED\"" 
+	)
+	(parameter
+		"LPM_WIDTH"
+		"16"
+		"Data width in bits, any integer > 0"
+		" 1" " 2" " 3" " 4" " 5" " 6" " 7" " 8" " 9" "10" "11" "12" "13" "14" "15" "16" "20" "24" "28" "32" "40" "48" "56" "64" 
+	)
+	(parameter
+		"LPM_WIDTHAD"
+		"8"
+		"Number of address lines, any integer > 0"
+		" 1" " 2" " 3" " 4" " 5" " 6" " 7" " 8" " 9" "10" "11" "12" 
+	)
+	(parameter
+		"LPM_WRADDRESS_CONTROL"
+		"\"REGISTERED\""
+		"Should the wraddress and wren ports be registered?"
+		"\"REGISTERED\"" "\"UNREGISTERED\"" 
+	)
+	(parameter
+		"USE_EAB"
+		""
+		"Specifies EAB use"
+		"\"ON\"" "\"OFF\"" 
+	)
+	(drawing
+		(line (pt 16 16)(pt 144 16))
+		(line (pt 16 168)(pt 144 168))
+		(line (pt 16 168)(pt 16 16))
+		(line (pt 144 168)(pt 144 16))
+	)
+	(annotation_block (parameter)(rect 824 368 1108 508))
+)
+(connector
+	(pt 664 624)
+	(pt 624 624)
+	(bus)
+)
+(connector
+	(pt 624 624)
+	(pt 624 536)
+	(bus)
+)
+(connector
+	(pt 664 608)
+	(pt 592 608)
+	(bus)
+)
+(connector
+	(pt 664 640)
+	(pt 592 640)
+)
+(connector
+	(pt 592 520)
+	(pt 640 520)
+)
+(connector
+	(pt 640 568)
+	(pt 664 568)
+)
+(connector
+	(pt 664 656)
+	(pt 640 656)
+)
+(connector
+	(pt 664 672)
+	(pt 656 672)
+)
+(connector
+	(pt 664 552)
+	(pt 656 552)
+)
+(connector
+	(pt 664 584)
+	(pt 656 584)
+)
+(connector
+	(pt 592 536)
+	(pt 624 536)
+	(bus)
+)
+(connector
+	(pt 624 536)
+	(pt 664 536)
+	(bus)
+)
+(connector
+	(pt 640 520)
+	(pt 640 568)
+)
+(connector
+	(pt 640 568)
+	(pt 640 656)
+)
+(connector
+	(pt 656 552)
+	(pt 656 584)
+)
+(connector
+	(pt 656 584)
+	(pt 656 672)
+)
+(connector
+	(pt 656 672)
+	(pt 656 712)
+)
+(connector
+	(pt 824 552)
+	(pt 864 552)
+	(bus)
+)
+(junction (pt 624 536))
+(junction (pt 640 568))
+(junction (pt 656 584))
+(junction (pt 656 672))

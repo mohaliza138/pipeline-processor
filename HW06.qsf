@@ -1,0 +1,216 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+# Date created = 10:57:40  April 16, 2024
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		HW06_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Arria II GX"
+set_global_assignment -name DEVICE AUTO
+set_global_assignment -name TOP_LEVEL_ENTITY data_path
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:57:40  APRIL 16, 2024"
+set_global_assignment -name LAST_QUARTUS_VERSION 13.1
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_NETLIST_WRITER_OUTPUT_DIR "C:/altera/13.1/arc_project/simulation/qsim/" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
+set_global_assignment -name VECTOR_WAVEFORM_FILE waveforms/testing_booth.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE waveforms/booth.vwf
+set_global_assignment -name VHDL_FILE fpu/shifter_mux.vhd
+set_global_assignment -name VHDL_FILE fpu/vcxvcvclpm_mux4.vhd
+set_global_assignment -name QIP_FILE fpu/vcxvcvclpm_mux4.qip
+set_global_assignment -name SOURCE_FILE fpu/vcxvcvclpm_mux4.cmp
+set_global_assignment -name BDF_FILE fpu/validation.bdf
+set_global_assignment -name VHDL_FILE fpu/valid_lpm_compare3.vhd
+set_global_assignment -name QIP_FILE fpu/valid_lpm_compare3.qip
+set_global_assignment -name SOURCE_FILE fpu/valid_lpm_compare3.cmp
+set_global_assignment -name VHDL_FILE fpu/valid_lpm_compare.vhd
+set_global_assignment -name QIP_FILE fpu/valid_lpm_compare.qip
+set_global_assignment -name SOURCE_FILE fpu/valid_lpm_compare.cmp
+set_global_assignment -name SOURCE_FILE fpu/shifter_mux.cmp
+set_global_assignment -name BDF_FILE fpu/priority_encoder12x4.bdf
+set_global_assignment -name BDF_FILE fpu/mul_align.bdf
+set_global_assignment -name VHDL_FILE fpu/lpm_mux3.vhd
+set_global_assignment -name QIP_FILE fpu/lpm_mux3.qip
+set_global_assignment -name SOURCE_FILE fpu/lpm_mux3.cmp
+set_global_assignment -name VHDL_FILE fpu/lpm_mux2.vhd
+set_global_assignment -name QIP_FILE fpu/lpm_mux2.qip
+set_global_assignment -name SOURCE_FILE fpu/lpm_mux2.cmp
+set_global_assignment -name VHDL_FILE fpu/lpm_mux1.vhd
+set_global_assignment -name QIP_FILE fpu/lpm_mux1.qip
+set_global_assignment -name SOURCE_FILE fpu/lpm_mux1.cmp
+set_global_assignment -name SOURCE_FILE fpu/fp_mul_lpm_compare6.cmp
+set_global_assignment -name VHDL_FILE fpu/fp_mul_c3.vhd
+set_global_assignment -name QIP_FILE fpu/fp_mul_c3.qip
+set_global_assignment -name SOURCE_FILE fpu/fp_mul_c3.cmp
+set_global_assignment -name VHDL_FILE fpu/fp_mul_c2.vhd
+set_global_assignment -name QIP_FILE fpu/fp_mul_c2.qip
+set_global_assignment -name SOURCE_FILE fpu/fp_mul_c2.cmp
+set_global_assignment -name BDF_FILE fpu/fp_mul.bdf
+set_global_assignment -name BDF_FILE fpu/fourBitMUX.bdf
+set_global_assignment -name BDF_FILE fpu/FA4bit.bdf
+set_global_assignment -name BDF_FILE fpu/FA.bdf
+set_global_assignment -name VHDL_FILE fpu/encodelpm_mux1.vhd
+set_global_assignment -name QIP_FILE fpu/encodelpm_mux1.qip
+set_global_assignment -name SOURCE_FILE fpu/encodelpm_mux1.cmp
+set_global_assignment -name VHDL_FILE fpu/c1.vhd
+set_global_assignment -name QIP_FILE fpu/c1.qip
+set_global_assignment -name SOURCE_FILE fpu/c1.cmp
+set_global_assignment -name QIP_FILE fpu/booth_counter.qip
+set_global_assignment -name VHDL_FILE fpu/align_mul_lpm_constant0.vhd
+set_global_assignment -name QIP_FILE fpu/align_mul_lpm_constant0.qip
+set_global_assignment -name SOURCE_FILE fpu/align_mul_lpm_constant0.cmp
+set_global_assignment -name VHDL_FILE fpu/align_lpm_mux1.vhd
+set_global_assignment -name QIP_FILE fpu/align_lpm_mux1.qip
+set_global_assignment -name SOURCE_FILE fpu/align_lpm_mux1.cmp
+set_global_assignment -name VHDL_FILE fpu/align_4_lpm_constant0.vhd
+set_global_assignment -name QIP_FILE fpu/align_4_lpm_constant0.qip
+set_global_assignment -name SOURCE_FILE fpu/align_4_lpm_constant0.cmp
+set_global_assignment -name VHDL_FILE fpu/align_3_lpm_constant3.vhd
+set_global_assignment -name QIP_FILE fpu/align_3_lpm_constant3.qip
+set_global_assignment -name SOURCE_FILE fpu/align_3_lpm_constant3.cmp
+set_global_assignment -name BDF_FILE fpu/ADDER8bit.bdf
+set_global_assignment -name VHDL_FILE fpu/aalgglpm_mux3.vhd
+set_global_assignment -name QIP_FILE fpu/aalgglpm_mux3.qip
+set_global_assignment -name SOURCE_FILE fpu/aalgglpm_mux3.cmp
+set_global_assignment -name SOURCE_FILE valid_lpm_compare2.cmp
+set_global_assignment -name SOURCE_FILE mul_shifter_lpm_mux1.cmp
+set_global_assignment -name SOURCE_FILE lpm_compare1.cmp
+set_global_assignment -name SOURCE_FILE fp_mul_lpm_mux1.cmp
+set_global_assignment -name QIP_FILE valid_lpm_compare2.qip
+set_global_assignment -name QIP_FILE valid_lpm_compare.qip
+set_global_assignment -name QIP_FILE mul_shifter_lpm_mux1.qip
+set_global_assignment -name QIP_FILE lpm_mux1.qip
+set_global_assignment -name QIP_FILE lpm_compare1.qip
+set_global_assignment -name QIP_FILE fp_mul_lpm_mux1.qip
+set_global_assignment -name VHDL_FILE valid_lpm_compare2.vhd
+set_global_assignment -name VHDL_FILE mul_shifter_lpm_mux1.vhd
+set_global_assignment -name VHDL_FILE lpm_compare1.vhd
+set_global_assignment -name VHDL_FILE fp_mul_lpm_mux1.vhd
+set_global_assignment -name VHDL_FILE lpm_clshift0.vhd
+set_global_assignment -name SOURCE_FILE lpm_clshift0.cmp
+set_global_assignment -name QIP_FILE lpm_clshift0.qip
+set_global_assignment -name VHDL_FILE fpu/shift_min_mux.vhd
+set_global_assignment -name QIP_FILE fpu/shift_min_mux.qip
+set_global_assignment -name SOURCE_FILE fpu/shift_min_mux.cmp
+set_global_assignment -name BDF_FILE fpu/right_shifter.bdf
+set_global_assignment -name VHDL_FILE fpu/ready_decider.vhd
+set_global_assignment -name QIP_FILE fpu/ready_decider.qip
+set_global_assignment -name SOURCE_FILE fpu/ready_decider.cmp
+set_global_assignment -name BDF_FILE fpu/priority_encoder4x2.bdf
+set_global_assignment -name VHDL_FILE fpu/lpm_significand.vhd
+set_global_assignment -name QIP_FILE fpu/lpm_significand.qip
+set_global_assignment -name SOURCE_FILE fpu/lpm_significand.cmp
+set_global_assignment -name VHDL_FILE fpu/fpu_ready_mux.vhd
+set_global_assignment -name QIP_FILE fpu/fpu_ready_mux.qip
+set_global_assignment -name SOURCE_FILE fpu/fpu_ready_mux.cmp
+set_global_assignment -name VHDL_FILE fpu/fpu_out.vhd
+set_global_assignment -name QIP_FILE fpu/fpu_out.qip
+set_global_assignment -name SOURCE_FILE fpu/fpu_out.cmp
+set_global_assignment -name VHDL_FILE fpu/fpu_or_not_decider.vhd
+set_global_assignment -name QIP_FILE fpu/fpu_or_not_decider.qip
+set_global_assignment -name SOURCE_FILE fpu/fpu_or_not_decider.cmp
+set_global_assignment -name BDF_FILE fpu/fp_unit.bdf
+set_global_assignment -name VHDL_FILE fpu/fp_slt_mux.vhd
+set_global_assignment -name QIP_FILE fpu/fp_slt_mux.qip
+set_global_assignment -name SOURCE_FILE fpu/fp_slt_mux.cmp
+set_global_assignment -name BDF_FILE fpu/fp_slt.bdf
+set_global_assignment -name VHDL_FILE fpu/fp_compare0.vhd
+set_global_assignment -name QIP_FILE fpu/fp_compare0.qip
+set_global_assignment -name SOURCE_FILE fpu/fp_compare0.cmp
+set_global_assignment -name VHDL_FILE fpu/fp_add_mux4.vhd
+set_global_assignment -name QIP_FILE fpu/fp_add_mux4.qip
+set_global_assignment -name SOURCE_FILE fpu/fp_add_mux4.cmp
+set_global_assignment -name VHDL_FILE fpu/fp_add_mux0.vhd
+set_global_assignment -name QIP_FILE fpu/fp_add_mux0.qip
+set_global_assignment -name SOURCE_FILE fpu/fp_add_mux0.cmp
+set_global_assignment -name VHDL_FILE fpu/fp_add_mux_expo.vhd
+set_global_assignment -name QIP_FILE fpu/fp_add_mux_expo.qip
+set_global_assignment -name SOURCE_FILE fpu/fp_add_mux_expo.cmp
+set_global_assignment -name VHDL_FILE fpu/fp_add_fraction_mux.vhd
+set_global_assignment -name QIP_FILE fpu/fp_add_fraction_mux.qip
+set_global_assignment -name SOURCE_FILE fpu/fp_add_fraction_mux.cmp
+set_global_assignment -name VHDL_FILE fpu/fp_add_cmp0.vhd
+set_global_assignment -name QIP_FILE fpu/fp_add_cmp0.qip
+set_global_assignment -name SOURCE_FILE fpu/fp_add_cmp0.cmp
+set_global_assignment -name BDF_FILE fpu/fp_add.bdf
+set_global_assignment -name BDF_FILE fpu/fp_abs.bdf
+set_global_assignment -name BDF_FILE zero_extend6to8.bdf
+set_global_assignment -name BDF_FILE xorb8.bdf
+set_global_assignment -name BDF_FILE sign_extend_6to8.bdf
+set_global_assignment -name BDF_FILE register_file.bdf
+set_global_assignment -name BDF_FILE register8.bdf
+set_global_assignment -name BDF_FILE reg8bit.bdf
+set_global_assignment -name BDF_FILE orb8.bdf
+set_global_assignment -name BDF_FILE mux8bit21.bdf
+set_global_assignment -name BDF_FILE main_control.bdf
+set_global_assignment -name BDF_FILE instruction_ram.bdf
+set_global_assignment -name BDF_FILE full_adder_b8.bdf
+set_global_assignment -name BDF_FILE full_adder_b4.bdf
+set_global_assignment -name BDF_FILE full_adder_b2.bdf
+set_global_assignment -name BDF_FILE full_adder.bdf
+set_global_assignment -name BDF_FILE equalb8.bdf
+set_global_assignment -name BDF_FILE delay_test.bdf
+set_global_assignment -name BDF_FILE data_ram.bdf
+set_global_assignment -name BDF_FILE data_path.bdf
+set_global_assignment -name BDF_FILE booth_multiplier.bdf
+set_global_assignment -name BDF_FILE andb8.bdf
+set_global_assignment -name BDF_FILE alu_control.bdf
+set_global_assignment -name BDF_FILE alu.bdf
+set_global_assignment -name VHDL_FILE upcode_mux.vhd
+set_global_assignment -name VHDL_FILE res_zero_mux.vhd
+set_global_assignment -name VHDL_FILE result_register.vhd
+set_global_assignment -name VHDL_FILE lpm_shiftreg1.vhd
+set_global_assignment -name VHDL_FILE lpm_shiftreg0.vhd
+set_global_assignment -name VHDL_FILE lpm_mux0.vhd
+set_global_assignment -name VHDL_FILE lpm_decode0.vhd
+set_global_assignment -name VHDL_FILE lpm_constant1.vhd
+set_global_assignment -name VHDL_FILE lpm_constant0.vhd
+set_global_assignment -name VHDL_FILE lpm_compare0.vhd
+set_global_assignment -name VHDL_FILE counter_cmp.vhd
+set_global_assignment -name VHDL_FILE booth_counter.vhd
+set_global_assignment -name QIP_FILE fpu/shifter_mux.qip
+set_global_assignment -name VECTOR_WAVEFORM_FILE waveforms/test.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE waveforms/fp_mul_test.vwf
+set_global_assignment -name QIP_FILE waveforms/lpm_constant0.qip
+set_global_assignment -name QIP_FILE waveforms/align_ldfpm_constant1.qip
+set_global_assignment -name VECTOR_WAVEFORM_FILE waveforms/align_test.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE waveforms/val_test.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE waveforms/encoder_test.vwf
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
