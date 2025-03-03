@@ -1,0 +1,59 @@
+DEPTH = 256; -- The size of memory in words 
+WIDTH = 16; -- The size of data in bits 
+ADDRESS_RADIX = HEX; -- The radix for address values 
+DATA_RADIX = BIN; -- The radix for data values 
+CONTENT -- start of (address : data pairs) 
+%
+addi R0, R3, 5 // --> input
+addi R0, R1, 1
+xor R4, R4, R4
+jal facto
+j end
+
+facto:
+    beq R1, R3, ret
+    sb R4, R7, 0
+    addi R4, R4, 1
+    sb R4, R3, 0 
+    addi R4, R4, 1
+    subi R3, R3, 1
+    jal facto
+    add R0, R3, R2
+    subi R4, R4, 1
+    lw R4, R3, 0 
+    lw R4, R3, 0 
+    mult R3, R2, R3
+    subi R4, R4, 1
+    lw R4, R7, 0
+    lw R4, R7, 0
+    ret:
+        jr R7 
+
+end:
+sb R4, R3, 0
+%
+BEGIN
+00: 0010000011000101;--20C5
+01: 0010000001000001;--20C5
+02: 0000100100100101;--0925
+03: 1111000000000101;--F005
+04: 1110000000010110;--E016
+05: 1000001011001111;
+06: 0110100111000000;
+07: 0010100100000001;
+08: 0110100011000000;
+09: 0010100100000001;
+0A: 0011011011000001;
+0B: 1111000000000101;
+0C: 0000000011010000;
+0D: 0011100100000001;
+0E: 0111100011000000;
+0F: 0111100011000000;
+10: 0000011010011100;
+11: 0011100100000001;
+12: 0111100010000000;
+13: 0111100111000000;
+14: 0111100111000000;
+15: 0000111000000111;
+16: 0110100011000000;
+END;

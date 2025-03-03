@@ -1,0 +1,29 @@
+DEPTH = 16; -- The size of memory in words 
+WIDTH = 16; -- The size of data in bits 
+ADDRESS_RADIX = HEX; -- The radix for address values 
+DATA_RADIX = BIN; -- The radix for data values 
+CONTENT -- start of (address : data pairs) 
+%
+addi R0, R4, 12
+addi R0, R1, 1
+addi R0, R3, 0
+and R1, R4, R2
+add R1, R1, R1
+beq R0, R1, 3
+beq R0, R2, -4
+addi R3, R3, 1
+bnq R0, R1, -6
+sb R0, R3, 0
+%
+BEGIN
+00: 0010000100001100; -- 210C
+01: 0010000001000001; -- 2041
+02: 0010000011000000; -- 20C0
+03: 0000001100010010; -- 0312
+04: 0000001001001000; -- 0248
+05: 1000000001000011; -- 8043
+06: 1000000010111100; -- 80BD
+07: 0010011011000001; -- 26C1
+08: 1001000001111010; -- 907B
+09: 0110000011000000; -- 60C0  
+END;
